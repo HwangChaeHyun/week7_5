@@ -3,7 +3,7 @@ name: Generate and Upload Artifact
 on: 
   push:
     branches:
-      - main
+      - [main]
 
 jobs:
   generate-file:
