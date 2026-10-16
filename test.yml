@@ -3,7 +3,7 @@ name: Generate and Upload Artifact
 on: 
   push:
     branches:
-      - master
+      - main
 
 jobs:
   generate-file:
@@ -22,7 +22,7 @@ jobs:
         run: python create_txt.py
 
       - name: Upload data.txt as artifact
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@v7 #데이터 파일을 지칭하겠다.
         with:
           name: data-file
           path: data.txt
